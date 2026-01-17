@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Upload, Play, Sparkles, ArrowRight } from "lucide-react";
 
@@ -55,10 +56,12 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
-              <Upload className="w-5 h-5" />
-              Upload your video
-              <ArrowRight className="w-4 h-4 ml-1" />
+            <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
+              <Link to="/upload">
+                <Upload className="w-5 h-5" />
+                Upload your video
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
             </Button>
             <Button variant="outline" size="xl" className="w-full sm:w-auto">
               <Play className="w-5 h-5" />
